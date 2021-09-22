@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Unit;
+namespace App\Tests\Unit\Service;
 
 use App\Entity\Item;
 use App\Entity\User;
@@ -9,6 +9,11 @@ use PHPUnit\Framework\TestCase;
 use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\MockObject\MockObject;
 
+/**
+ * Class ItemServiceTest
+ *
+ * @package App\Tests\Unit\Service
+ */
 class ItemServiceTest extends TestCase
 {
     /**
@@ -37,6 +42,7 @@ class ItemServiceTest extends TestCase
 
         $expectedObject = new Item();
         $expectedObject->setUser($user);
+        $expectedObject->setData($data);
 
         $this->entityManager->expects($this->once())->method('persist')->with($expectedObject);
 

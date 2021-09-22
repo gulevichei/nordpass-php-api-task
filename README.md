@@ -20,3 +20,17 @@ make tests
 ### Postman requests collection
 
 You can import all available API calls to Postman using `postman_collection.json` file
+
+### Project endpoints
+
+* GET item - returns a list of all user items
+* PUT item formdata:{id, data} - makes changes to item
+* POST item formdata:{data} - creates a new item
+* DELETE items/{id} - delete exist user item by id
+
+### Updates 22-09-2021
+
+* added new endpoint - PUT item
+* accelerated return of the list items by skipping the conversion of data from the database into objects
+* added item membership check to methods PUT and DELETE
+* updated make init setting up test and prod environment
